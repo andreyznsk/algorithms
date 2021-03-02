@@ -245,6 +245,10 @@ public class TreeImpl<E extends Comparable<? super E>> implements Tree<E> {
         System.out.println("................................................................");
     }
 
+    public boolean isBalanced(){
+        return isBalanced(getRoot());
+    }
+
     public boolean isBalanced(Node<E> node){
         return (node == null) ||
                 isBalanced(node.getLeftChild()) &&
@@ -263,5 +267,9 @@ public class TreeImpl<E extends Comparable<? super E>> implements Tree<E> {
 
     public int getCurrentLevel(Node<E> current){
         return height(current);
+    }
+
+    public int getCurrentLevel(){
+        return getCurrentLevel(getRoot());
     }
 }

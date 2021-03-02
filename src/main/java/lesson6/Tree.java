@@ -24,8 +24,12 @@ public interface Tree<E extends Comparable<? super E>> {
 
     boolean isBalanced(Node<E> node);
 
+    boolean isBalanced();
+
     Node<E> getRoot();
 
     int getCurrentLevel(Node<E> current);
+
+    int getCurrentLevel();
 
 }
