@@ -43,7 +43,7 @@ public class ChanHashTable<K,V> implements HashTable<K, V> {
 
     @SuppressWarnings("unchecked")
     public ChanHashTable(int maxSize) {
-        this.data = new ArrayList[maxSize * 2];
+        this.data = new ArrayList[maxSize];
     }
 
     private int hashFunc(K key) {
